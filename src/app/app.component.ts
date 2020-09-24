@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+  todoArray = [];
+
+  addTodo(value) {
+    if (value != "") {
+      this.todoArray.push(value);
+      console.log(this.todoArray);
+    }
+    else {
+      alert("Todo required!");
+    }
+  }
 }
